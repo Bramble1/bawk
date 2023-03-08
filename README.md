@@ -16,3 +16,8 @@ to add new alias
 to reset and init the bashrc file 
 
 ./bawk i
+
+
+# setup
+
+chmod o+x (if not already) then cp to /usr/bin and then call from anywhere with "bawk..."
