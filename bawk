@@ -85,7 +85,7 @@ function add_binding(number,replacement)
 #could redirect it into a temp file, and then at the end, read that file back
 #into the .bashrc see if that's possible to do within itself,
 
-BEGIN{ZARGV[1]=ARGV[1];ARGV[1]="/home/sam/.bashrc"; {if(ZARGV[1]=="a"){printf("Enter key: ");getline arg < "/dev/stdin"
+BEGIN{ZARGV[1]=ARGV[1];ARGV[1]="/home/sam/.bashrc"; {if(ZARGV[1]=="a"){printf("Enter key(1-5): ");getline arg < "/dev/stdin"
 		printf("Enter value: ");getline arg2 < "/dev/stdin"}   }}\
 {
 	flag="1"
@@ -100,8 +100,9 @@ BEGIN{ZARGV[1]=ARGV[1];ARGV[1]="/home/sam/.bashrc"; {if(ZARGV[1]=="a"){printf("E
 		#and continuing reading perhaps?
 	#	printf("supply an argument to anchor: ")
 	#	getline arg < "/dev/stdin"
-
-		add_binding(arg,arg2)
+		if(arg>="1" && arg<="5"){
+			add_binding(arg,arg2)
+		}
 		
 	}
 
