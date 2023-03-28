@@ -21,3 +21,9 @@ to reset and init the bashrc file
 # setup
 
 chmod o+x (if not already) then cp to /usr/bin and then call from anywhere with "bawk..."
+
+
+# future updates
+
+1. Allow user the option to enter custom alias as opposed to just the default 1-5 range(Which is a deliberate design choice), However it means we will
+need to keep track of the custom alises
